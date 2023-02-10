@@ -13,7 +13,7 @@ void PrintArray(string[] arr)  //печатаем массив красиво
     }
     Console.WriteLine(arr[arr.Length - 1] + " ]");
 }
-string[] FillArray(string[] arr)
+string[] FillArray(string[] arr) //заполнение массива элементами пользователя
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -21,14 +21,14 @@ string[] FillArray(string[] arr)
     }
     return arr;
 }
-string[] ShowShortItems(string[] arr) //считает положительные числа в массиве и печатает его. требует указать кол-во элементов (n)
+string[] ShowShortItems(string[] arr) //вычисляет количество коротких элементов и выводит их
 {
-    int len = 0;
+    int shorts = 0;
        for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i].Length <= 3) len++;
+        if (arr[i].Length <= 3) shorts++;
     }
-    string[] newArr = new string[len];
+    string[] newArr = new string[shorts];
     int j = 0;
     for (int i = 0; i < arr.Length; i++)
     {
