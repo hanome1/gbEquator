@@ -15,7 +15,11 @@ void PrintArray(string[] arr)  //печатаем массив красиво
 }
 string[] FillArray(string[] arr)
 {
-    
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = ReadData($"Введите элемент {i + 1}:");
+    }
+    return arr;
 }
 string[] ShowShortItems(string[] arr) //считает положительные числа в массиве и печатает его. требует указать кол-во элементов (n)
 {
