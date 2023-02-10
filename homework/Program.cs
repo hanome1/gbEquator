@@ -4,9 +4,9 @@
     string item = Console.ReadLine();
     return item;
 }
-void PrintArray(string[] arr)  //печатаем массив красиво
+void PrintArray(string msg, string[] arr)  //печатаем массив красиво
 {
-    Console.Write("\n[ ");
+    Console.Write($"{msg}\n[ ");
     for (int i = 0; i < arr.Length - 1; i++)
     {
         Console.Write(arr[i] + ", ");
@@ -42,7 +42,7 @@ string[] ShowShortItems(string[] arr) //вычисляет количество 
 }
 string[] userArray = new string[int.Parse(ReadData("Введите количество элементов массива: "))];
 userArray = FillArray(userArray);
-Console.WriteLine("Ваш массив:");
-PrintArray(userArray);
-Console.WriteLine("Элементы, состоящие из трёх символов или меньше:");
-PrintArray(ShowShortItems(userArray));
+// Console.WriteLine("Ваш массив:");
+PrintArray("Ваш массив:", userArray);
+// Console.WriteLine("Элементы, состоящие из трёх символов или меньше:");
+PrintArray("Элементы, состоящие из трёх символов или меньше:", ShowShortItems(userArray));
