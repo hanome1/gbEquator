@@ -23,5 +23,20 @@ string[] FillArray(string[] arr)
 }
 string[] ShowShortItems(string[] arr) //считает положительные числа в массиве и печатает его. требует указать кол-во элементов (n)
 {
-   
+    int len = 0;
+       for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3) len++;
+    }
+    string[] newArr = new string[len];
+    int j = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            newArr[j] = arr[i];
+            j++;
+        }
+    }
+    return newArr;
 }
