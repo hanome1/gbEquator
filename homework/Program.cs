@@ -40,3 +40,9 @@ string[] ShowShortItems(string[] arr) //считает положительны�
     }
     return newArr;
 }
+string[] userArray = new string[int.Parse(ReadData("Введите количество элементов массива: "))];
+userArray = FillArray(userArray);
+Console.WriteLine("Ваш массив:");
+PrintArray(userArray);
+Console.WriteLine("Элементы, состоящие из трёх символов или меньше:");
+PrintArray(ShowShortItems(userArray));
